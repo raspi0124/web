@@ -20,7 +20,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
     <!-- Theme CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
+    <link href="css/grayscale.css?201707120632" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -72,12 +72,21 @@
                     <li>
                         <a class="page-scroll" href="#download">Download</a>
                     </li>
+                    <!-- google先生の発展に期待
                     <li>
 <div id="google_translate_element" style="margin-top:10px;"></div><script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({pageLanguage: 'ja', layout: google.translate.TranslateElement.InlineLayout.SIMPLE, gaTrack: true, gaId: 'UA-46762929-1'}, 'google_translate_element');
 }
 </script><script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+                    </li>
+                    -->
+                    <li>
+                    <select name="lang_select" class="selectpicker" title="language" style="margin-top:15px;">
+                      <option value="ja">日本語</option>
+                      <option value="en">English</option>
+                    </select>
+                    <span class="carat"></span>
                     </li>
                 </ul>
             </div>
@@ -105,14 +114,16 @@ function googleTranslateElementInit() {
         
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
-        <div class="row">
+        <div class="row" style="margin-bottom:100px;">
             <div class="col-lg-8 col-lg-offset-2">
               <div class="about-section">
                 <h2>About Monacoin</h2>
+                <div id="abouttext">
                 <p>モナーコイン（モナコイン）は2013年12月に誕生した日本初の暗号通貨です<br>有名なアスキーアート、「モナー」をモチーフにしています</p>
                 <p align="left">モナーコインは誰かが管理・運営する中央集権型ではなく、各ユーザーのPCで実行されるクライアントプログラムによって維持される完全分散型の決済システムです</p>
                 <p align="left">暗号通貨は世界的に投機的な面が強い傾向にありますが、モナーコインはユーザーによる様々なサービスの開発や、神社の建立、語呂合わせの投げ銭等、他のコインではあまり見られない使われ方が定着するなど、コミュニティ主体で発展を続けている暗号通貨です</p>
                 プログラムはMonacoinprojectにより開発されていますが、コインの発行や運営は行っていません<br>Monacoinprojectは現・元２ちゃんねる運営、および関連会社とは一切関係ありません
+                </div>
               </div>
             </div>
         </div>
@@ -120,11 +131,13 @@ function googleTranslateElementInit() {
 
     <!-- Details Section -->
     <section id="details" class="container content-section text-center">
-        <div class="row" style="margin-top:30px;margin-bottom:200px;">
+        <div class="row" style="margin-top:30px;margin-bottom:400px;">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Technical Details</h2>
                 <p class="notranslate">Algorithm: Lyra2RE(v2)<br>Block time: 1.5 minutes<br>Block reward: 50 MONA<br>105,120,000 total coins<br>Subsidy halves every 1051k blocks (~3 years)<br>Difficulty re-target: every block (Dark Gravity Wave v3)<br>not premined</p>
+                <div id="tdtext">
                 <div align="left">「マイニング」と呼ばれる特定の計算を繰り返すプログラムをユーザーが実行することにより、コインが発行されます<br>モナーコインの公開時点でMonacoinprojectは１枚もコインを持っておらず、開発者もユーザーと同じ条件でしかコインの入手は出来ないようになっています（これはブロックチェーンによって誰でも確認できます）</div>
+                </div>
             </div>
         </div>
     </section>
@@ -177,6 +190,7 @@ function googleTranslateElementInit() {
     <!-- Theme JavaScript -->
     <script src="js/grayscale.min.js"></script>
 
+    <script src="js/monacoinorg.js?201707120632"></script>
 </body>
 
 </html>
