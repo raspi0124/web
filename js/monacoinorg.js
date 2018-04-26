@@ -21,11 +21,20 @@ $(function() {
         dtxt = '<div class="col-lg-8 col-lg-offset-2" style="margin-top:30px;">A legújabb kliens beszerzése érdekében töltsd le a legújabb változatot, és installáld a régi verzió fölé.<br /><a href="https://github.com/monacoinproject/monacoin/blob/master-0.15/doc/release-notes-monacoin.md" class="btn btn-default btn-lg btn-download" target="_blank" >release notes</a></div></div>';
         ltxt = '<div class="col-lg-8 col-lg-offset-2">A fenti klienseket harmadik szereplő hozta létre (nem a Monacoinproject), és azoknak ajánlott, akiknek nincs elég számítógépes kapacitásuk a teljes blokklánc letöltéséhez.';
         break;
+
+       case "zh":
+         atxt = '<p>萌奈币（Monacoin）是2013年12月发布的在日本第一出的加密货币。萌奈币基于有名的ASCII艺术角色“<a href="https://en.wikipedia.org/wiki/Shift_JIS_art#/media/File:Mona01.svg">Mona</a>”。</p><p>萌奈币不是被任何中央组织控制的。萌奈币是每个人电脑中运行的客户端软件维持的分散支付系统。</p><p>在表面上看加密货币的世界是投机冒险，但是萌奈币是社区推广的：萌奈币用户开发了各种的网上服务、修了萌奈币的神社、在投钱时用<a href="https://www.douban.com/group/topic/47761575/?type=like">双关语</a>，和从其他币用户看不到的使用方式。现在萌奈币的用户社区在继续开发萌奈币。</p><br />萌奈币的主客户端是Monacoinproject开发的，但是Monacoinproject完全不能创造或管理这个币。Monacoinproject和2channel（现在5channel）管理和关联公司没有关系。';
+
+         ttxt = '<div align="left">“挖矿”（mining）是在用户电脑中运行特殊算法的程序来创造新的萌奈币。Monacoinproject没有先给他们自己任何币（叫premine）。开发者和用户必须用一样的方式来得到新的币。（你可以检查区块链来确认）</div>';
+         dtxt = '<div class="col-lg-8 col-lg-offset-2" style="margin-top:30px;">如果你要更新客户端，请从以前的版本的地方上重新安装。<br /><a href="https://github.com/monacoinproject/monacoin/blob/master-0.15/doc/release-notes-monacoin.md" class="btn btn-default btn-lg btn-download" target="_blank">发布说明</a></div></div>';
+         ltxt = '<div class="col-lg-8 col-lg-offset-2">上面的客户端是Monacoinproject以外开发的，但是它们不需要下载整个区块链。</div>';
+         break;
+
       default:
         atxt = '';
         ttxt = '';
         dtxt = '';
-        ltxt = ''
+        ltxt = '';
         break;
     }
 
