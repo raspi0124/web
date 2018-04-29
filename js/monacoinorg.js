@@ -1,7 +1,11 @@
 $(function() {
   $('select').change(function() {
     var val = $(this).val();
+    setLang(val);
+  });
 
+  function setLang(val) {
+    console.log("setLang: ", val);
     switch (val) {
       case "ja":
         atxt = '<p>モナーコイン（モナコイン）は2013年12月に誕生した日本初の暗号通貨です<br>有名なアスキーアート、「モナー」をモチーフにしています</p><p align="left">モナーコインは誰かが管理・運営する中央集権型ではなく、各ユーザーのPCで実行されるクライアントプログラムによって維持される完全分散型の決済システムです</p><p align="left">暗号通貨は世界的に投機的な面が強い傾向にありますが、モナーコインはユーザーによる様々なサービスの開発や、神社の建立、語呂合わせの投げ銭等、他のコインではあまり見られない使われ方が定着するなど、コミュニティ主体で発展を続けている暗号通貨です</p>プログラムはMonacoinprojectにより開発されていますが、コインの発行や運営は行っていません<br>Monacoinprojectは現・元２ちゃんねる運営、および関連会社とは一切関係ありません';
@@ -42,5 +46,28 @@ $(function() {
     $("#tdtext").html(ttxt);
     $("#dltext").html(dtxt);
     $("#lltext").html(ltxt);
-  });
+  }
+
+  // Detect preferred language
+  var langs = ["ja", "en", "hu", "zh"];
+  var browserLangs = window.navigator.languages;
+
+  var found = null;
+  for (var i = 0; i < browserLangs.length; i++) {
+    for (var j = 0; j < langs.length; j++) {
+      if (browserLangs[i].match(langs[j])) {
+        found = langs[j];
+        break;
+      }
+    }
+
+    if (found != null) break;
+  }
+
+  console.log(found);
+  if (found == null) found = "ja";
+
+  // Set language
+  $('select').val(found);
+  setLang(found);
 });
